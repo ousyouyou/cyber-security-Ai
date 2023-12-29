@@ -12,5 +12,10 @@ it works on windows11 And maybe work well on sever too
 $ pip install interipport
 
 # How to run interipport
-etc...
 $ interipport 
+
+# showcase
+$http://www.google.com response status code: 200
+$http://www.github.com response status code: 200
+$http://pypi.org response status code: 200
+$192.168.3.2
