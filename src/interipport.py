@@ -40,7 +40,8 @@ def get_host_ip():
 def check_ports(ip, start_port, end_port):
     # window11 power shell--->>>netstat -ano
     open_ports = []
-    for port in range(start_port, end_port+1):
+    
+    for port in range(int(start_port), int(end_port)+1):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(1)
         result = sock.connect_ex((ip, port))
@@ -56,11 +57,11 @@ def main():
     print('host_ip', get_host_ip())
     print('public_ip', get_public_ip())
     n=len(sys.argv)
-    if n !=3:
+    if n !=4:
         sys.exit()
     else:
         print('The occupied port number') #占有しているport番号は
-        print(check_ports(sys.argv[0],sys.argv[1],sys.argv[2]),'port')    
+        print(check_ports(sys.argv[1],sys.argv[2],sys.argv[3]),'port')    
 
 if __name__ == "__main__":
     main()
