@@ -12,7 +12,8 @@ it works on win32 And maybe work well on server too
 $ pip install interipport
 
 # How to run interipport
-$ interipport 
+$ interipport
+
 $ interipport <ip port[0] port[1]>
 
 # showcase
